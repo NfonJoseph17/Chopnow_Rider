@@ -6,26 +6,26 @@ const todaysEarningsList = [
     {
         id: '1',
         orderId: 'ACR147852',
-        date: '02-02-2021',
-        amount: 32.00,
+        date: '22-06-2024',
+        amount: 500.00,
     },
     {
         id: '2',
         orderId: 'FTR159874',
-        date: '02-02-2021',
-        amount: 30.00,
+        date: '22-06-2024',
+        amount: 500.00,
     },
     {
         id: '3',
         orderId: 'BHT123698',
-        date: '02-02-2021',
-        amount: 40.00,
+        date: '22-06-2024',
+        amount: 500.00,
     },
     {
         id: '4',
         orderId: 'NHJ159856',
-        date: '02-02-2021',
-        amount: 36.00,
+        date: '22-06-2024',
+        amount: 500.00,
     },
 ];
 
@@ -33,26 +33,26 @@ const yesterdaysEarningsList = [
     {
         id: '1',
         orderId: 'GTS123654',
-        date: '01-02-2021',
-        amount: 28.00,
+        date: '21-06-2024',
+        amount: 500.00,
     },
     {
         id: '2',
         orderId: 'FST123698',
-        date: '01-02-2021',
-        amount: 30.00,
+        date: '21-06-2024',
+        amount: 500.00,
     },
     {
         id: '3',
         orderId: 'BHT123698',
-        date: '01-02-2021',
-        amount: 40.00,
+        date: '21-06-2024',
+        amount: 500.00,
     },
     {
         id: '4',
         orderId: 'NHJ159856',
-        date: '01-02-2021',
-        amount: 36.00,
+        date: '21-06-2024',
+        amount: 500.00,
     },
 ];
 
@@ -97,7 +97,7 @@ const EarningsScreen = ({ navigation }) => {
                     </Text>
                 </Text>
                 <Text style={{ alignSelf: 'flex-end', ...Fonts.primaryColor14SemiBold }}>
-                    {`$`}{item.amount.toFixed(2)}
+                    {item.amount.toFixed(2)}{` XAF`}
                 </Text>
             </View>
         )
@@ -114,13 +114,13 @@ const EarningsScreen = ({ navigation }) => {
                 </View>
                 <View style={styles.totalEarningWithDateWrapStyle}>
                     <Text style={{ ...Fonts.whiteColor12SemiBold }}>
-                        Today
+                        Yesterday
                     </Text>
                     <Text style={{ marginTop: Sizes.fixPadding - 5.0, ...Fonts.whiteColor15SemiBold }}>
-                        $134.00
+                        2000.00 XAF
                     </Text>
                     <Text style={{ ...Fonts.whiteColor12Medium }}>
-                        01 Feb, 2021
+                        21 Jun, 2024
                     </Text>
                 </View>
                 <FlatList
@@ -155,7 +155,7 @@ const EarningsScreen = ({ navigation }) => {
                     </Text>
                 </Text>
                 <Text style={{ alignSelf: 'flex-end', ...Fonts.primaryColor14SemiBold }}>
-                    {`$`}{item.amount.toFixed(2)}
+                    {item.amount.toFixed(2)}{` XAF`}
                 </Text>
             </View>
         )
@@ -175,10 +175,10 @@ const EarningsScreen = ({ navigation }) => {
                         Today
                     </Text>
                     <Text style={{ marginTop: Sizes.fixPadding - 5.0, ...Fonts.whiteColor15SemiBold }}>
-                        $138.00
+                        2000.00 XAF
                     </Text>
                     <Text style={{ ...Fonts.whiteColor12Medium }}>
-                        02 Feb, 2021
+                        22 Jun, 2024
                     </Text>
                 </View>
                 <FlatList

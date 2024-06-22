@@ -212,8 +212,8 @@ const ProfileScreen = ({ navigation }) => {
             }}
           />
           <View style={{ flex: 1, marginLeft: Sizes.fixPadding }}>
-            <Text style={{ ...Fonts.blackColor15SemiBold }}>Devin Shah</Text>
-            <Text style={{ ...Fonts.grayColor12Medium }}>(+91) 1234567890</Text>
+            <Text style={{ ...Fonts.blackColor15SemiBold }}>Devin Nde</Text>
+            <Text style={{ ...Fonts.grayColor12Medium }}>+237 678909790</Text>
           </View>
         </View>
         <MaterialIcons

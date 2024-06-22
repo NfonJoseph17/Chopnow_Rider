@@ -6,23 +6,23 @@ const todaysHistoryList = [
     {
         id: '1',
         orderId: 'ACR147856',
-        paymentMethod: 'Online',
-        totalPayment: 32.00,
-        orderStatus: 'Delivered'
+        paymentMethod: 'MTN Mobile Money',
+        totalPayment: 500.00,
+        orderStatus: 'Pending'
     },
     {
         id: '2',
         orderId: 'AWQ145698',
-        paymentMethod: 'Cash on delivery',
-        totalPayment: 35.00,
+        paymentMethod: 'MTN Mobile Money',
+        totalPayment: 500.00,
         orderStatus: 'Delivered'
     },
     {
         id: '3',
         orderId: 'TRE123654',
-        paymentMethod: 'Online',
-        totalPayment: 40.00,
-        orderStatus: 'Pending'
+        paymentMethod: 'MTN Mobile Money',
+        totalPayment: 500.00,
+        orderStatus: 'Delivered'
     },
 ];
 
@@ -30,22 +30,22 @@ const yesterdaysHistoryList = [
     {
         id: '1',
         orderId: 'ACR147856',
-        paymentMethod: 'Online',
-        totalPayment: 32.00,
+        paymentMethod: 'MTN Mobile Money',
+        totalPayment: 500.00,
         orderStatus: 'Rejected'
     },
     {
         id: '2',
         orderId: 'AWQ145698',
-        paymentMethod: 'Cash on delivery',
-        totalPayment: 35.00,
+        paymentMethod: 'MTN Mobile Money',
+        totalPayment: 500.00,
         orderStatus: 'Delivered'
     },
     {
         id: '3',
         orderId: 'TRE123654',
-        paymentMethod: 'Online',
-        totalPayment: 40.00,
+        paymentMethod: 'MTN Mobile Money',
+        totalPayment: 500.00,
         orderStatus: 'Delivered'
     },
 ];
@@ -102,7 +102,7 @@ const HistoryScreen = ({ navigation }) => {
                                 Total Payment: { }
                             </Text>
                             <Text style={{ ...Fonts.blackColor14SemiBold }}>
-                                {`$`}{item.totalPayment.toFixed(2)}
+                                {item.totalPayment.toFixed(2)}{` XAF`}
                             </Text>
                         </Text>
                     </View>
@@ -168,7 +168,7 @@ const HistoryScreen = ({ navigation }) => {
                                 Total Payment: { }
                             </Text>
                             <Text style={{ ...Fonts.blackColor14SemiBold }}>
-                                {`$`}{item.totalPayment.toFixed(2)}
+                               {item.totalPayment.toFixed(2)}{` XAF`}
                             </Text>
                         </Text>
                     </View>

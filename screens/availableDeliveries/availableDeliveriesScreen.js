@@ -21,48 +21,31 @@ const newDeliveriesList = [
   {
     id: "1",
     orderId: "ACR148856",
-    paymentMethod: "Online",
-    totalPayment: 32.0,
+    paymentMethod: "MTN Mobile Money",
+    // totalPayment: 32.0,
     orderTime: "1 min ago",
-    deliveryAddress: "48, Hunters Road, Vepery",
-    pickupAddress: "Great Western, Mcc Lane, Fort",
+    deliveryAddress: "Room 24, Standard lodge, Bambili",
+    pickupAddress: "Las Vegas Complext",
   },
   {
     id: "2",
     orderId: "AWQ145698",
-    paymentMethod: "Cash on delivery",
-    totalPayment: 35.0,
-    orderTime: "20 min ago",
-    deliveryAddress: "491, Sai Section, Ambernath",
-    pickupAddress: "21, 5th Cross Doble Road...",
+    paymentMethod: "MTN Mobile Money",
+    // totalPayment: 35.0,
+    orderTime: "2 min ago",
+    deliveryAddress: "Carlson's Lodge, Bambili",
+    pickupAddress: "legacy restaurant ENS street, Bambili",
   },
   {
     id: "3",
     orderId: "TRE123654",
-    paymentMethod: "Online",
-    totalPayment: 40.0,
-    orderTime: "45 min ago",
-    deliveryAddress: "175, Jawahar Ngr, Amizara",
-    pickupAddress: "Jaina Tower Distt Centre...",
+    paymentMethod: "MTN Mobile money",
+    // totalPayment: 40.0,
+    orderTime: "25 min ago",
+    deliveryAddress: "Standard Lodge, Bambili",
+    pickupAddress: "Crush in Black Rose Restaurant, Bambili",
   },
-  {
-    id: "4",
-    orderId: "TSA123698",
-    paymentMethod: "Online",
-    totalPayment: 40.0,
-    orderTime: "55 min ago",
-    deliveryAddress: "48, Hunters Road, Vepery",
-    pickupAddress: "Great Western, Mcc Lane, Fort",
-  },
-  {
-    id: "5",
-    orderId: "TSA123698",
-    paymentMethod: "Online",
-    totalPayment: 40.0,
-    orderTime: "1h ago",
-    deliveryAddress: "48, Hunters Road, Vepery",
-    pickupAddress: "Great Western, Mcc Lane, Fort",
-  },
+  
 ];
 
 const activeDeliveriesList = [
@@ -135,10 +118,10 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
   const dialogItem = {
     id: "1",
     orderId: "ACR147852",
-    paymentMethod: "Online",
-    totalPayment: 32.0,
-    deliveryAddress: "48, Hunters Road, Vepery",
-    pickupAddress: "Great Western, Mcc Lane, Fort",
+    paymentMethod: "MTN Mobile Money",
+    totalPayment: 500.0,
+    deliveryAddress: "Room 24 Standard Lodge, Bambili",
+    pickupAddress: "Las Vegas Complext",
     orderItems: [
       {
         item: "Deal 1",
@@ -149,8 +132,8 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
         amount: 2.5,
       },
     ],
-    customerName: "Samantha John",
-    customerMobileNo: "(+91) 1234567890",
+    customerName: "Jeannoel",
+    customerMobileNo: "+237 680787547",
   };
 
   return (
@@ -264,7 +247,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                     ...Fonts.blackColor13SemiBold,
                   }}
                 >
-                  Street: {dialogItem.deliveryAddress}
+                  delivery: {dialogItem.deliveryAddress}
                 </Text>
               </View>
               <View style={{ width: 15.0, alignItems: "center" }}>
@@ -306,7 +289,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                     ...Fonts.blackColor13SemiBold,
                   }}
                 >
-                  Street: {dialogItem.pickupAddress}
+                  Pickup: {dialogItem.pickupAddress}
                 </Text>
               </View>
             </View>
@@ -472,7 +455,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                 ...Fonts.blackColor13SemiBold,
               }}
             >
-              Street: {item.deliveryAddress}
+              Delivery: {item.deliveryAddress}
             </Text>
           </View>
           <View style={{ width: 15.0, alignItems: "center" }}>
@@ -528,7 +511,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                   ...Fonts.blackColor13SemiBold,
                 }}
               >
-                Street: {item.pickupAddress}
+                Pickup: {item.pickupAddress}
               </Text>
             </View>
             <View style={styles.arrowForwardIconWrapStyle}>
@@ -639,13 +622,13 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
             <View style={{ paddingHorizontal: Sizes.fixPadding }}>
               {dialogItem.orderItems.map((item, index) => (
                 <View key={`${index}`} style={styles.dialogCommonStyle}>
-                  <Text style={{ flex: 1, ...Fonts.blackColor14Medium }}>
+                  {/* <Text style={{ flex: 1, ...Fonts.blackColor14Medium }}>
                     {item.item}
-                  </Text>
-                  <Text style={{ ...Fonts.blackColor14Medium }}>
+                  </Text> */}
+                  {/* <Text style={{ ...Fonts.blackColor14Medium }}>
                     {`$`}
                     {item.amount}
-                  </Text>
+                  </Text> */}
                 </View>
               ))}
 
@@ -653,7 +636,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                 <Text style={{ flex: 1, ...Fonts.blackColor14Medium }}>
                   Delivery Charge
                 </Text>
-                <Text style={{ ...Fonts.blackColor14Medium }}>$1.50</Text>
+                <Text style={{ ...Fonts.blackColor14Medium }}>500.0</Text>
               </View>
 
               <View
@@ -666,7 +649,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                 <Text style={{ flex: 1, ...Fonts.primaryColor14SemiBold }}>
                   Total
                 </Text>
-                <Text style={{ ...Fonts.primaryColor14SemiBold }}>$32.00</Text>
+                <Text style={{ ...Fonts.primaryColor14SemiBold }}>500.0 XAF</Text>
               </View>
             </View>
           </View>
@@ -693,7 +676,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                     ...Fonts.blackColor13SemiBold,
                   }}
                 >
-                  Street: {dialogItem.deliveryAddress}
+                  Delivery: {dialogItem.deliveryAddress}
                 </Text>
               </View>
               <View style={{ width: 15.0, alignItems: "center" }}>
@@ -735,7 +718,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                     ...Fonts.blackColor13SemiBold,
                   }}
                 >
-                  Street: {dialogItem.pickupAddress}
+                  Pickup: {dialogItem.pickupAddress}
                 </Text>
               </View>
             </View>
@@ -883,7 +866,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                   {item.paymentMethod}
                 </Text>
               </Text>
-              <Text numberOfLines={1}>
+              {/* <Text numberOfLines={1}>
                 <Text style={{ ...Fonts.grayColor12Medium }}>
                   Total Payment: { }
                 </Text>
@@ -891,7 +874,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                   {`$`}
                   {item.totalPayment.toFixed(2)}
                 </Text>
-              </Text>
+              </Text> */}
             </View>
           </View>
           <Text
@@ -918,7 +901,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                 ...Fonts.blackColor13SemiBold,
               }}
             >
-              Street: {item.deliveryAddress}
+              Delivery: {item.deliveryAddress}
             </Text>
           </View>
           <View style={{ width: 15.0, alignItems: "center" }}>
@@ -974,7 +957,7 @@ const AvailableDeliveriesScreen = ({ navigation }) => {
                   ...Fonts.blackColor13SemiBold,
                 }}
               >
-                Street: {item.pickupAddress}
+                Pickup: {item.pickupAddress}
               </Text>
             </View>
             <View style={styles.arrowForwardIconWrapStyle}>
